@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Three Difficulty Modes</title>
+    <meta name="description" content="Play the classic snake game with three difficulty levels: Easy, Normal, and Hard">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Snake Game By Syed Sabir Ali </h1>
+        
+        <!-- Mode Selection Screen -->
+        <div id="modeSelection" class="mode-selection">
+            <h2>Select Difficulty</h2>
+            <div class="mode-buttons">
+                <button class="mode-btn" data-mode="easy">
+                    <span class="mode-title">Easy</span>
+                    <span class="mode-desc">Slow Speed</span>
+                </button>
+                <button class="mode-btn" data-mode="normal">
+                    <span class="mode-title">Normal</span>
+                    <span class="mode-desc">Medium Speed</span>
+                </button>
+                <button class="mode-btn" data-mode="hard">
+                    <span class="mode-title">Hard</span>
+                    <span class="mode-desc">Fast Speed</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="game-screen hidden">
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Mode:</span>
+                    <span id="currentMode">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">High Score:</span>
+                    <span id="highScore">0</span>
+                </div>
+            </div>
+            
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <div class="controls">
+                <p>Use Arrow Keys to control the snake</p>
+                <button id="pauseBtn" class="control-btn">Pause</button>
+                <button id="restartBtn" class="control-btn">Restart</button>
+                <button id="backBtn" class="control-btn">Change Mode</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p class="final-score">Score: <span id="finalScore">0</span></p>
+            <div class="game-over-buttons">
+                <button id="playAgainBtn" class="control-btn">Play Again</button>
+                <button id="changeModeBtn" class="control-btn">Change Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
